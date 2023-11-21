@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+ header,footer {
+  background-image: url("../assets/header.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  top: 0px;
+}
+main {
+  background-image: url("../assets/Free Vector _ Hand drawn halloween border template.jpg");
+  background-size: cover;
+  min-height: 600px;
+}
+h1 {
+  text-align: center;
+  background-color: aqua;
+}
+#logoHeader
+{
+  width: 9%;
+}
+
+body .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+#iconoMascara {
+  width: 70px;
+}
+#imgMiedo {
+  width: 50px;
+}
+#inputMiedo {
+  width: 100%;
+}
+#imgMonstruo {
+  width: 60px;
+}
+#iconoDefensa {
+  width: 60px;
+}
+.logoNav {
+  width: 10px;
+}
+
+nav a{
+  text-decoration: none;
+  color: rgb(99, 239, 6);
+  font-weight: 700;
+}
+form{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 3vb;
+}
+
+.centrar
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+#articulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  width: 300px;
+  height: 120px;
+  padding: 10px;
+  margin: 10px;
+  border: black 3px solid;
+  background-color: #68a6cf;
+}
+.contenedor-spinner
+{
+  display: flex;
+  justify-content: center;
+}
+.oculto
+{
+  display: none;
+}
+.filtro-promedio{
+  background-color: rgb(213, 97, 97);
+  width: 80%;
+  padding: 15px;
+  border: 2px solid black;
+}
+.filtrado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

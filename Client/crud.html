@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap">
+    <link rel="stylesheet" href="../server/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/crud.js" type="module"></script>
+    <title>HALLOWIN DE PAZOS</title>
+  </head>
+    <body>
+      <header class="row align-items-center justify-content-between">
+        <img class="col-md-4" id="logoHeader" src="./assets/descarga.jpg" alt="logo de la pagina"/>
+        <nav class="col-md-4">
+          <ul class="row align-items-center list-unstyled list-inline">
+            <li class="col-sm list-inline-item"><a href="./index.html">HOME</a></li>
+            <li class="col-sm list-inline-item"><a href="#">MONSTRUOS</a></li>
+            <li class="col-sm list-inline-item"><a href="#">BLOG</a></li>
+            <li class="col-sm list-inline-item"><a href="#">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="container-fluid">      
+      <main>
+        <div class="row align-items-center">
+          <h1 class="h1form">CRUD MONSTRUOS</h1>
+        </div>
+          <section class="seccion-formulario">
+            <div id="alerta" class="modal">
+              <div class="modal-content">
+                <span class="close" id="cerrar">&times;</span>
+                <p id="modalMessage"></p>
+              </div>
+            </div>
+              <fieldset class="centrar">
+                <form class="row text-white">
+                    <h2>INFORMACION DEL MONSTRUO</h2>
+                    <label class="form-label">NOMBRE:</label>
+                    <input class="form-control mb-2" type="text" name="txtNombre" placeholder="INGRESE NOMBRE" autocomplete="off"/>
+                    <label class="lblAlias"><i class="fa-solid fa-mask"></i>ALIAS:</label>
+                    <input id="ALIAS" class="form-control mb-2" type="text" name="txtAlias" placeholder="INGRESE ALIAS"/>
+                    <label class="form-label"><i class="fa-solid fa-shield"></i>DEFENSA:</label>
+                <div class="container d-flex justify-content-evenly">
+                  <div class="form-check">
+                    <input checked class="form-check-input" type="radio" name="rdoDefensa" value="POCION" checked />
+                    <label class="form-label">POCION</label>
+                  </div>
+                  <div class="form-check">
+                    <input checked class="form-check-input" type="radio" name="rdoDefensa" value="CRUCIFIJO" />
+                    <label class="form-label">CRUCIFIJO</label>
+                  </div>
+                    <input checked class="form-check-input" type="radio" name="rdoDefensa" value="ESTACA" />
+                    <label class="form-label">ESTACA</label>
+                  <div class="form-check"> 
+                    <input checked class="form-check-input" type="radio" name="rdoDefensa" value="PLATA" />
+                    <label class="form-label">PLATA</label>
+                  </div> 
+                </div>
+                <label class="form-label"><i class="fa-solid fa-ghost"></i>MIEDO:</label>
+                <input class="mb-2" id="inputMiedo" type="range" name="txtMiedo" value="" />
+                <label for="selectMonstruo" class="form-label"><i class="fa-brands fa-optin-monster"></i>MONSTRUO</label>
+                <select class="form-select mb-2" name="selectMonstruo" id="selectMonstruo" value="ESQUELETO"></select>
+                <label class="form-label"><i class="fa-solid fa-book"></i>HABILIDAD:</label>
+                <select class="form-select mb-2" name="selectHabilidad" id="selectHabilidad" value="DULCE O TRUCO"
+              ></select>
+            <div class="col">
+              <input id="btnGuardar" class="btn btn-primary" type="submit" value="Guardar" />
+              <input id="btnEliminar" class="btn btn-primary" type="button" value="Eliminar Monstruo"/>
+              <input id="btnCancelar" class="btn btn-secondary" type="button" value="Cancelar"/>
+              <input type="hidden" name="txtId" />
+            </form>
+        </fieldset>
+      </section>
+      <section class="filtrado text-white">
+        <div class="row align-items-center justify-content-center filtro-promedio" id="formFiltrado">
+          <div class="col-md-3">
+            <label for="filtros">Filtrar Monstruos:</label>
+            <select class="form-select" name="filtros" id="filtros">
+              <option value="Todos">Todos</option>
+              <option value="Vampiro">Vampiro</option>
+              <option value="Hombre">Hombre Lobo</option>
+              <option value="Fantasma">Fantasma</option>
+              <option value="Esqueleto">Esqueleto</option>
+              <option value="Bruja">Bruja</option>
+              <option value="Zombie">Zombie</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="txtPromedio">Promedio de Miedo:</label>
+            <input class="form-control" type="text" name="txtPromedio" id="txtPromedio" autocomplete="off" readonly>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-between mt-2 filtro-promedio">
+          <div class="col-md"><input class="check" type="checkbox" name="nombre" checked> Nombre</div>
+          <div class="col-md"><input class="check" type="checkbox" name="alias" checked> Alias</div>
+          <div class="col-md"><input class="check" type="checkbox" name="defensa" checked> Defensa</div>
+          <div class="col-md"><input class="check" type="checkbox" name="miedo" checked> Miedo</div>
+          <div class="col-md"><input class="check" type="checkbox" name="monstruo" checked> Monstruo</div>
+          <div class="col-md"><input class="check" type="checkbox" name="habilidad" checked> Habilidad</div>
+        </div>                 
+      </section>
+      <section class="seccion-tabla">
+        <fieldset class="fieldsetTabla">
+          <legend class="text-white">EDIT</legend>
+          <div class="contenedor-spinner">
+            <div id="divSpinner">
+              <img src="./assets/spinner.gif" alt="loader spiner" id="spinner"/>
+            </div>
+          </div>
+          <div hidden id="tabla"></div>
+        </fieldset>
+      </section>
+    </main>
+  </div>
+    <footer class="row mt-auto align-items-center justify-content-between">
+      <nav class="col-md-4">
+        <ul class="row align-items-center">
+          <li class="col-sm list-inline-item"><a href="./index.html">HOME</a></li>
+          <li class="col-sm list-inline-item"><a href="#">MONSTRUOS</a></li>
+          <li class="col-sm list-inline-item"><a href="#">BLOG</a></li>
+          <li class="col-sm list-inline-item"><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <p class="col-md-4 text-white">LABORATORIO III - TODOS LOS DERECHOS RESERVADOS 2025 &copy;</p>
+    </footer>
+  </body>
+</html>

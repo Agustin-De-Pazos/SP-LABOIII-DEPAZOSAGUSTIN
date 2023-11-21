@@ -1,0 +1,31 @@
+{
+  "monstruos": [
+    {
+      "id": 1700342349758,
+      "nombre": "asdasd",
+      "alias": "asdasd",
+      "defensa": "POCION",
+      "miedo": 50,
+      "monstruo": "ESQUELETO",
+      "habilidad": "DULCE O TRUCO"
+    },
+    {
+      "id": 1700606853303,
+      "nombre": "asdasd",
+      "alias": "asdasd",
+      "defensa": "PLATA",
+      "miedo": 19,
+      "monstruo": "BRUJA",
+      "habilidad": "DULCE O TRUCO"
+    },
+    {
+      "id": 1700609224669,
+      "nombre": "asasdas",
+      "alias": "asdasdas",
+      "defensa": "PLATA",
+      "miedo": 50,
+      "monstruo": "ESQUELETO",
+      "habilidad": "DULCE O TRUCO"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap">
+    <link rel="stylesheet" href="../server/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/cards.js" type="module"></script>
+    <title>Hallowin De Pazos</title>
+  </head>
+  <body>
+    <header class="row align-items-center justify-content-between">
+      <img class="col-md-4" id="logoHeader" src="./assets/descarga.jpg" alt="logo de la pagina"/>
+      <nav class="col-md-4">
+        <ul class="row align-items-center list-unstyled list-inline">
+          <li class="col-sm list-inline-item"><a href="./index.html">HOME</a></li>
+          <li class="col-sm list-inline-item"><a href="./crud.html">MONSTRUOS</a></li>
+          <li class="col-sm list-inline-item"><a href="#">BLOG</a></li>
+          <li class="col-sm list-inline-item"><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container-fluid">
+      <main>
+        <h1 class="text-center text-white">Información Monstruos:</h1>
+        <div class="contenedor-spinner">
+          <div id="divSpinner">
+            <img
+            src="./assets/spinner.gif"
+            alt="loader spiner" id="spinner"/>
+          </div>
+        </div>
+        <section id="articulos"></section>
+      </main>
+    </div>
+    <footer class="row mt-auto align-items-center justify-content-between">
+      <nav class="col-md-4">
+        <ul class="row align-items-center">
+          <li class="col-sm list-inline-item"><a href="./index.html">HOME</a></li>
+          <li class="col-sm list-inline-item"><a href="./crud.html">MONSTRUOS</a></li>
+          <li class="col-sm list-inline-item"><a href="#">BLOG</a></li>
+          <li class="col-sm list-inline-item"><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <p class="col-md-4 text-white">LABORATORIO III - TODOS LOS DERECHOS RESERVADOS 2025 &copy;</p>
+    </footer>
+  </body>
+</html>
